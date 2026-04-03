@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-noto-serif: "Noto Serif", serif;
+  --font-plus-jakarta: "Plus Jakarta Sans", sans-serif;
+  
+  --color-surface: #fbfbe2;
+  --color-surface-container-low: #f5f5dc;
+  --color-surface-container-high: #eaead1;
+  --color-surface-container-highest: #e4e4cc;
+  --color-surface-container-lowest: #ffffff;
+  
+  --color-primary: #154212;
+  --color-primary-container: #2d5a27;
+  --color-on-primary: #ffffff;
+  
+  --color-secondary: #2c6956;
+  --color-secondary-container: #aeedd5;
+  --color-on-secondary-container: #316d5b;
+  
+  --color-on-surface: #1b1d0e;
+  --color-on-surface-variant: #42493e;
+}
+
+@layer base {
+  body {
+    @apply font-plus-jakarta bg-surface text-on-surface;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-noto-serif;
+  }
+}
+
+.glass-nav {
+  @apply backdrop-blur-xl bg-surface/70;
+}
+
+.hero-text-shadow {
+  text-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.ambient-shadow {
+  box-shadow: 0 30px 40px rgba(21, 66, 18, 0.06);
+}
